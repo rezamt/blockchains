@@ -1,5 +1,5 @@
 ## 3.DOTS
-[](https://github.com/rezamt/blockchains/blob/master/Ethereum/cover.png)
+![alt Highlevel](https://github.com/rezamt/blockchains/blob/master/Ethereum/cover.png)
 
 ## REFERENCES
 - [A Next-Generation Smart Contract and Decentralized Application Platform](https://github.com/ethereum/wiki/wiki/White-Paper)
