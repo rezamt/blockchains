@@ -1,0 +1,151 @@
+{
+	"variables": [],
+	"info": {
+		"name": "IBM BlockchainREST",
+		"_postman_id": "6d3953c5-a43f-d914-b64a-beba9ac15ac1",
+		"description": "Reflect the REST API's changes to chaincodeID, where path and name\nare used/returned instead of having to pass the url and version every\ntime.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query",
+			"request": {
+				"url": "{{PEER-0}}/chaincode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"query\",\n  \"params\": {\n    \"type\": 1,\n    \"chaincodeID\": {\n      \"name\": \"{{chainCodeID}}\"\n    },\n    \"ctorMsg\": {\n      \"function\": \"account_read\",\n      \"args\": [\n        \"reza\", \"pass1234\"\n      ]\n    },\n    \"secureContext\": \"{{enrollId}}\"\n  },\n  \"id\": 2\n}"
+				},
+				"description": "Queries for the value of \"a\" from chaincode_example02"
+			},
+			"response": []
+		},
+		{
+			"name": "Invoke",
+			"request": {
+				"url": "{{PEER-0}}/chaincode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"invoke\",\n  \"params\": {\n    \"type\": 1,\n    \"chaincodeID\": {\n      \"name\": \"{{chainCodeID}}\"\n    },\n    \"ctorMsg\": {\n      \"function\": \"account_add\",\n      \"args\": [\"ccd17f28-4dbf-11e7-b114-b2f933d5fe66\",\"Reza\",\"MT\",\"reza\",\"pass1234\"]\n    },\n    \"secureContext\": \"user_type1_0\"\n  },\n  \"id\": 0\n}"
+				},
+				"description": "Invokes a transaction of 20 units between \"a\" and \"b\""
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Login",
+			"request": {
+				"url": "{{PEER-0}}/registrar",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"enrollId\": \"{{enrollId}}\",\n  \"enrollSecret\": \"{{enrollSecret}}\"\n}"
+				},
+				"description": "Login to a peer with an enrollID and enrollSecret"
+			},
+			"response": []
+		},
+		{
+			"name": "Deploy",
+			"request": {
+				"url": "{{PEER-0}}/chaincode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"jsonrpc\":\"2.0\",\n   \"method\":\"deploy\",\n   \"params\":{\n      \"type\":1,\n      \"chaincodeID\":{\n         \"path\":\"https://github.com/rezamt/todo-list-fabric/chaincode\"\n      },\n      \"ctorMsg\":{\n         \"function\":\"init\",\n         \"args\":[\n            \"init\"\n         ]\n      },\n      \"secureContext\":\"{{enrollId}}\"\n   },\n   \"id\":0\n}"
+				},
+				"description": "Login to a peer with an enrollID and enrollSecret"
+			},
+			"response": []
+		},
+		{
+			"name": "Invoke  :: account_add",
+			"request": {
+				"url": "{{PEER-0}}/chaincode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"invoke\",\n  \"params\": {\n    \"type\": 1,\n    \"chaincodeID\": {\n      \"name\": \"{{chainCodeID}}\"\n    },\n    \"ctorMsg\": {\n      \"function\": \"account_delete\",\n      \"args\": [\"ccd17f28-4dbf-11e7-b114-b2f933d5fe66\"]\n    },\n    \"secureContext\": \"user_type1_0\"\n  },\n  \"id\": 0\n}"
+				},
+				"description": "Invokes a transaction of 20 units between \"a\" and \"b\""
+			},
+			"response": []
+		},
+		{
+			"name": "Query :: account_browser",
+			"request": {
+				"url": "{{PEER-0}}/chaincode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"query\",\n  \"params\": {\n    \"type\": 1,\n    \"chaincodeID\": {\n      \"name\": \"{{chainCodeID}}\"\n    },\n    \"ctorMsg\": {\n      \"function\": \"account_browse\",\n      \"args\": [\n        \"all\"\n      ]\n    },\n    \"secureContext\": \"{{enrollId}}\"\n  },\n  \"id\": 2\n}"
+				},
+				"description": "Queries for the value of \"a\" from chaincode_example02"
+			},
+			"response": []
+		},
+		{
+			"name": "Query :: account_read",
+			"request": {
+				"url": "{{PEER-0}}/chaincode",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"query\",\n  \"params\": {\n    \"type\": 1,\n    \"chaincodeID\": {\n      \"name\": \"{{chainCodeID}}\"\n    },\n    \"ctorMsg\": {\n      \"function\": \"account_browse\",\n      \"args\": [\n        \"all\"\n      ]\n    },\n    \"secureContext\": \"{{enrollId}}\"\n  },\n  \"id\": 2\n}"
+				},
+				"description": "Queries for the value of \"a\" from chaincode_example02"
+			},
+			"response": []
+		}
+	]
+}
