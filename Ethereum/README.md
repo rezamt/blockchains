@@ -8,3 +8,4 @@
 - [Just Enought Bitcoins for Ethereum](https://media.consensys.net/time-sure-does-fly-ed4518792679)
 - [Ehtereum Gas Price per Instruction](https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit)
 - [Short guide to bitcoin Forks](http://www.coindesk.com/short-guide-bitcoin-forks-explained/)
+- [Kadmelia - P2P DHT](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
