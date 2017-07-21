@@ -9,3 +9,4 @@
 - [Ehtereum Gas Price per Instruction](https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs/edit)
 - [Short guide to bitcoin Forks](http://www.coindesk.com/short-guide-bitcoin-forks-explained/)
 - [Kadmelia - P2P DHT](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
+- [The Quest for Scalable Blockchain Fabric: Proof-of-Work vs. BFT Replication](https://allquantor.at/blockchainbib/pdf/vukolic2015quest.pdf)
