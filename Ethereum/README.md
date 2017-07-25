@@ -10,3 +10,5 @@
 - [Short guide to bitcoin Forks](http://www.coindesk.com/short-guide-bitcoin-forks-explained/)
 - [Kadmelia - P2P DHT](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 - [The Quest for Scalable Blockchain Fabric: Proof-of-Work vs. BFT Replication](https://allquantor.at/blockchainbib/pdf/vukolic2015quest.pdf)
+- [Blockchain Definition Part 01](http://blog.samuelbrooks.io/2017/04/27/blockchain-the-infinite-state-machine/)
+- [Blockchain Asset Tokenisation Part 02](http://blog.samuelbrooks.io/2017/05/30/blockchain-asset-tokenisation/)
