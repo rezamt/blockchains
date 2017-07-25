@@ -12,3 +12,4 @@
 - [The Quest for Scalable Blockchain Fabric: Proof-of-Work vs. BFT Replication](https://allquantor.at/blockchainbib/pdf/vukolic2015quest.pdf)
 - [Blockchain Definition Part 01](http://blog.samuelbrooks.io/2017/04/27/blockchain-the-infinite-state-machine/)
 - [Blockchain Asset Tokenisation Part 02](http://blog.samuelbrooks.io/2017/05/30/blockchain-asset-tokenisation/)
+- [Smart contract platform Rootstock](https://www.cryptocompare.com/coins/guides/what-is-rootstock/)
