@@ -13,3 +13,4 @@
 - [Blockchain Definition Part 01](http://blog.samuelbrooks.io/2017/04/27/blockchain-the-infinite-state-machine/)
 - [Blockchain Asset Tokenisation Part 02](http://blog.samuelbrooks.io/2017/05/30/blockchain-asset-tokenisation/)
 - [Smart contract platform Rootstock](https://www.cryptocompare.com/coins/guides/what-is-rootstock/)
+- [Private vs Public Blockchains](https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains/)
