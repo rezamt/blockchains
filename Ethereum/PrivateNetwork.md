@@ -7,7 +7,7 @@ mkdir blockchain-training
 ```
 # Init the genesis block
 
-You can find a genesis block (here)[]
+You can find a genesis block [here](https://github.com/ethereum/go-ethereum/wiki/Private-network)
 
 or use the sample I am putting here, and save it in your current directory as genesis.json
 
@@ -68,26 +68,23 @@ admin.nodeInfo
 admin.peers
 ```
 # Adding node #2 to the peer list on node #1
-## 1- get the node #2 enode string using 
+1- get the node #2 enode string using 
 ```
 admin.nodeInfo.enode
 
+"enode://5b50b6b68d24ef9f228f37fd5590e9dd1c08cf74bed8c01702787d1cec3df24753b9839d317565df556cbe9957e74563262cde5928275ef0762bbb6a876a2ffd@[::]:30304"
 ```
 
-an result should be: 
-```   "enode://5b50b6b68d24ef9f228f37fd5590e9dd1c08cf74bed8c01702787d1cec3df24753b9839d317565df556cbe9957e74563262cde5928275ef0762bbb6a876a2ffd@[::]:30304"
-```
+2- now on node #1 run the following command using enode id from previous step
 
-## 2- now on node #1 run the following command using enode id from previous step
 ```
 admin.addPeer("enode://5b50b6b68d24ef9f228f37fd5590e9dd1c08cf74bed8c01702787d1cec3df24753b9839d317565df556cbe9957e74563262cde5928275ef0762bbb6a876a2ffd@[::]:30304") 
 ```
 
-## 3- check the peers status on both node #1 and node #2
+3- check the peers status on both node #1 and node #2
 
 ```
 admin.peers
-
 
 [{
     caps: ["eth/63"],
@@ -107,7 +104,6 @@ admin.peers
 }]
 
 ```
-
 ## Mining on your Private Network
 
 on either node #1 or node #2 run the following command:
@@ -172,5 +168,6 @@ INFO [08-24|00:42:59] Imported new chain segment               blocks=1 txs=0 mg
 
 
 ### Additional Links and References
+- [Private-network](https://github.com/ethereum/go-ethereum/wiki/Private-network)
 - [Mining](https://github.com/ethereum/go-ethereum/wiki/Mining)
 - [Cli Tools - GETH & ETH](https://www.ethereum.org/cli)
