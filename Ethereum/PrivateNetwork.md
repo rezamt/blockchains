@@ -1,4 +1,7 @@
 ## Setting up Multi Node Private Ehtereum Blockchain
+
+Before you start make sure that you have installed geth client for this project.
+
 ```
 mkdir blockchain-training
 ```
@@ -54,23 +57,21 @@ geth --datadir=./secondnode --port 30304  --networkid 1234   # 0 (main network),
 ```
 geth attach ipc:/Users/reza/blockchain-training/firstnode/geth.ipc
 geth attach ipc:/Users/reza/blockchain-training/secondnode/geth.ipc
-```
 
 # Run the following commands in each console and observer the result
 # for the following modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
-```
+
 web3              # all objects are listed under this object
 txpool            # Check the current transaction pool
 admin             # Admin object and all related admin tasks
 admin.nodeInfo    
 admin.peers
 ```
-
-
 # Adding node #2 to the peer list on node #1
 ## 1- get the node #2 enode string using 
 ```
 admin.nodeInfo.enode
+
 ```
 
 an result should be: 
@@ -78,9 +79,12 @@ an result should be:
 ```
 
 ## 2- now on node #1 run the following command using enode id from previous step
+```
 admin.addPeer("enode://5b50b6b68d24ef9f228f37fd5590e9dd1c08cf74bed8c01702787d1cec3df24753b9839d317565df556cbe9957e74563262cde5928275ef0762bbb6a876a2ffd@[::]:30304") 
+```
 
 ## 3- check the peers status on both node #1 and node #2
+
 ```
 admin.peers
 
