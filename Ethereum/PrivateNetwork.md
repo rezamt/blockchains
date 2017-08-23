@@ -1,11 +1,11 @@
-## Setting up Multi Node Private Ehtereum Blockchain
+# Setting up Multi Node Private Ehtereum Blockchain
 
 Before you start make sure that you have installed geth client for this project.
 
 ```
 mkdir blockchain-training
 ```
-# Init the genesis block
+## Init the genesis block
 
 You can find a genesis block [here](https://github.com/ethereum/go-ethereum/wiki/Private-network)
 
@@ -40,6 +40,8 @@ or use the sample I am putting here, and save it in your current directory as ge
 
 ```
 
+## Setting Up Network and Peers
+
 then run the following commands:
 
 ```
@@ -48,12 +50,13 @@ geth --datadir=./firstnode --port 30303 init genesis.json
 geth --datadir=./secondnode --port 30304 init genesis.json
 ```
 
-# start the nodes
+start the nodes
 ```
 geth --datadir=./firstnode --port 30303  --networkid 1234   # 0 (main network),1 are reserved
 geth --datadir=./secondnode --port 30304  --networkid 1234   # 0 (main network),1 are reserved
 ```
-# Attaching to nodes console
+Attaching to nodes console
+
 ```
 geth attach ipc:/Users/reza/blockchain-training/firstnode/geth.ipc
 geth attach ipc:/Users/reza/blockchain-training/secondnode/geth.ipc
@@ -67,21 +70,22 @@ admin             # Admin object and all related admin tasks
 admin.nodeInfo    
 admin.peers
 ```
-# Adding node #2 to the peer list on node #1
-1- get the node #2 enode string using 
+Adding node #2 to the peer list on node #1
+
+Step 1- get the node #2 enode string using 
 ```
 admin.nodeInfo.enode
 
 "enode://5b50b6b68d24ef9f228f37fd5590e9dd1c08cf74bed8c01702787d1cec3df24753b9839d317565df556cbe9957e74563262cde5928275ef0762bbb6a876a2ffd@[::]:30304"
 ```
 
-2- now on node #1 run the following command using enode id from previous step
+Step 2- now on node #1 run the following command using enode id from previous step
 
 ```
 admin.addPeer("enode://5b50b6b68d24ef9f228f37fd5590e9dd1c08cf74bed8c01702787d1cec3df24753b9839d317565df556cbe9957e74563262cde5928275ef0762bbb6a876a2ffd@[::]:30304") 
 ```
 
-3- check the peers status on both node #1 and node #2
+Step 3- check the peers status on both node #1 and node #2
 
 ```
 admin.peers
@@ -165,6 +169,9 @@ INFO [08-24|00:42:57] Imported new chain segment               blocks=1 txs=0 mg
 INFO [08-24|00:42:59] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=2.593ms   mgasps=0.000 number=8 hash=397cf1…7b76fb
 
 ```
+
+### What next ?
+Running Boot Nodes and connecting nodes to them.
 
 
 ### Additional Links and References
