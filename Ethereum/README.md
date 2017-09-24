@@ -14,3 +14,5 @@
 - [Blockchain Asset Tokenisation Part 02](http://blog.samuelbrooks.io/2017/05/30/blockchain-asset-tokenisation/)
 - [Smart contract platform Rootstock](https://www.cryptocompare.com/coins/guides/what-is-rootstock/)
 - [Private vs Public Blockchains](https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains/)
+- [Ethereum Contract Security Techniques and Tips](https://github.com/ConsenSys/smart-contract-best-practices#reentrancy)
+- [OpenZeppelin is a library for writing secure Smart Contracts on Ethereum](https://github.com/OpenZeppelin/zeppelin-solidity)
