@@ -1,0 +1,15 @@
+{
+  logIndex: 0,
+  transactionIndex: 0,
+  transactionHash: '0x80abbdc89fee40bb58f13146497eb0a780c0f1e4dad038f3494c3ec8bca3e616',
+  blockHash: '0x9de54218ce466a29eea2c1a2458ee28aead34fc3b76a49dbfca8caf7809eaaf0',
+  blockNumber: 969,
+  address: '0xfe13d80dd71a44fa123efc568e008dca935f17dd',
+  type: 'mined',
+  event: 'Approval,
+  args: {
+    _owner: '0xdc44c4b3ba74a306ae38fb14b3bd244a8a1d738f',
+    _spender: '0xbcc6d1de0aa120735f241d2bb80fd3f9d26d4848'
+    _value: {}
+  }
+}
